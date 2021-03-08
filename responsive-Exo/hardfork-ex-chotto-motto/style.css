@@ -10,18 +10,49 @@ La référence de la couleur jaune - #fee500
 /* ajouter une bordure jaune autour du body 24px  */
 /* changer la police pour Changa, laisser le sans-serif comme le 2e choix */
 /* augmente la taille de police au 20px, l'interligne de 1.8 */
+:root {
+    
+    --yellow: #fee500;
+}
+
+* {
+    box-sizing: border-box;
+ }
+
+
 body {
+    border: 24px solid var(--yellow);
+    margin: 0;
 }
 
 /* le block contenu est centré ne dépasse pas la largeur de 720px */
 main {
+    margin-left: auto;
+    margin-right: auto;
+    /* text-align:center  !important; */
+     max-width: 720px; 
+}
+.intro{
+    font-size: 32px;
 }
 
 /* les images ne dépassent pas l'écran */
 img {
+    
+    max-width: 100%;
+    height: auto;
+    
+    
+}
+main img {
+  
+
+    box-shadow: 10px 10px 0 var(--yellow);
 }
 /* centrer les éléments de la partie header */
 header {
+    text-align: center;
+    font-weight: bold;
 }
 
 /* titre h2 centré */
@@ -30,11 +61,9 @@ h2 {
 
 /* les éléments dans le footer centrée */
 footer {
+    text-align: center;
 }
 
-/* taille de police plus grande (32px) dans le paragraphe intro, centré */
-.intro {
-}
 
 /* titre h2 centré */
 h2 {
@@ -42,22 +71,37 @@ h2 {
 
 /* les éléments dans le footer centrée */
 footer {
+    text-align: center;
 }
 
 /* la liste sans bullets */
 /* pas de marge ni de padding */
 nav ul {
+    list-style-type: none;
 }
 
 /* les éléments de la liste affichés dans une ligne */
 nav li {
+    display: inline-block;
 }
 
 /* les liens dans la partie navigation en majuscules, couleur noir */
 /* espacés de 12px */
 nav a {
+    text-transform: uppercase;
+     color: white;
+    text-decoration: none;
+    border-spacing: 12px;
+    background-color: black;
+   
+    
 }
 
 /* le lien dans la partie navigation en survol devient jaune  */
 nav a:hover {
+    background-color: var(--yellow);
+    transition: 1.1s;
+    padding: 4px 12px;
+   
 }
+
